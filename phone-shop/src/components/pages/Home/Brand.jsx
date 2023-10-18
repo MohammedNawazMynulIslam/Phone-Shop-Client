@@ -1,9 +1,10 @@
-const Brand = ({ brand, onClick }) => {
-  // console.log(brand);
+import { Link } from "react-router-dom";
+
+const Brand = ({ brand }) => {
   const { name, image } = brand;
-  // const productName = (name) => {};
+
   return (
-    <div onClick={() => onClick(name)}>
+    <Link to={`/products/${name}`} className="no-underline">
       <div className="card w-[400px] mx-auto h-[400px] bg-base-100 shadow-xl">
         <figure className="">
           <img
@@ -17,7 +18,7 @@ const Brand = ({ brand, onClick }) => {
           <div className="card-actions mt-7"></div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
