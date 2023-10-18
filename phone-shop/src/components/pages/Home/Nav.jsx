@@ -17,7 +17,7 @@ const Nav = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-blue-500 text-white rounded-full">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,13 +43,22 @@ const Nav = () => {
               {navLink}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <NavLink to="/" className="normal-case text-xl">
+            <img
+              className="w-[50px]"
+              src="https://i.ibb.co/BVChCKP/5636521.png"
+              alt=""
+            />
+          </NavLink>
+          Buy-Phone
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <NavLink to="/" className="btn  text-white">
+            Login
+          </NavLink>
         </div>
       </div>
     </div>

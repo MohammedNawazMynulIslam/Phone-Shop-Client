@@ -1,10 +1,13 @@
+import Banner from "./Banner";
+import Footer from "./Footer";
 import Nav from "./Nav";
 
 const Home = () => {
   return (
-    <div>
+    <div className="container mx-auto mt-14">
       <Nav></Nav>
-      <h2>This is home</h2>
+      <Banner></Banner>
+      <Footer></Footer>
     </div>
   );
 };
