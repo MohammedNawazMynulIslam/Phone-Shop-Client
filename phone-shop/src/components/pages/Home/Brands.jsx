@@ -28,7 +28,7 @@ const Brands = () => {
             "url(https://i.ibb.co/PMwmV0F/andrew-ridley-j-R4-Zf-ri-Ej-I-unsplash.jpg)",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-28 text-black">
           {brands.map((brand) => (
             <Brand key={brand._id} brand={brand} onClick={handleBrandClicked} />
           ))}

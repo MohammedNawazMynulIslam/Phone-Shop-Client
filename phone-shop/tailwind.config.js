@@ -7,5 +7,10 @@ export default {
   theme: {
     extend: {},
   },
+
+  darkMode:'class',
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   plugins: [require("daisyui")],
 }

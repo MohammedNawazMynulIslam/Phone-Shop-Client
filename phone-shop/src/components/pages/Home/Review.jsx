@@ -15,7 +15,7 @@ const Review = () => {
         <div className="hero-content text-center text-neutral-content">
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-40">
-              <div className="card w-[400px] h-[500px] bg-base-100 shadow-xl">
+              <div className="card w-[400px] h-[500px] bg-base-100 shadow-xl text-black">
                 <figure>
                   <img
                     className="w-full h-[400px]"
@@ -35,7 +35,7 @@ const Review = () => {
                   </p>
                 </div>
               </div>
-              <div className="card w-[400px] h-[500px] bg-base-100 shadow-xl">
+              <div className="card w-[400px] h-[500px] bg-base-100 shadow-xl text-black">
                 <figure>
                   <img
                     className="w-full h-[400px]"
@@ -53,7 +53,7 @@ const Review = () => {
                   </p>
                 </div>
               </div>
-              <div className="card w-[400px] h-[500px] bg-base-100 shadow-xl">
+              <div className="card w-[400px] h-[500px] bg-base-100 shadow-x text-black">
                 <figure>
                   <img
                     className="w-full h-[400px]"
