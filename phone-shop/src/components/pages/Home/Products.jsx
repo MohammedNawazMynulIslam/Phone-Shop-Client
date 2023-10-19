@@ -3,6 +3,7 @@ import BrandsProduct from "./BrandsProduct";
 
 const ProductsPage = () => {
   const { brandName } = useParams();
+  console.log(brandName);
 
   return (
     <div className="container mx-auto">

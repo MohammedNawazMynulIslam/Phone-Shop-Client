@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Brand4Products = ({ product }) => {
-  console.log(product);
+  // console.log(product);
+  const { _id, image, name, brandName, price, type, rating } = product;
 
-  const { image, name, brandName, price, type, rating } = product;
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -17,8 +17,12 @@ const Brand4Products = ({ product }) => {
           <p>{type}</p>
           <p>{rating}</p>
           <div className="card-actions">
-            <button className="btn btn-primary">Update</button>
-            <button className="btn btn-primary">Details</button>
+            <Link to={`/updateProduct/${_id}`}>
+              <button className="btn btn-primary">Update</button>
+            </Link>
+            <Link to={`/product/${_id}`}>
+              <button className="btn btn-primary">Details</button>
+            </Link>
           </div>
         </div>
       </div>
