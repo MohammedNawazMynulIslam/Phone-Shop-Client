@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Home/Navbar";
+
 import { useContext, useState } from "react";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);

@@ -1,10 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
   const { user, signIn, googleSignIn } = useContext(AuthContext);
