@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const UpdateProduct = () => {
   const product = useLoaderData();
   const { _id, image, name, brandName, price, type, rating } = product;
+  console.log(product);
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ const UpdateProduct = () => {
       rating,
     };
     console.log(updateProduct);
-    fetch(`http://localhost:3000/product/${_id}`, {
+    fetch(`http://localhost:3000/products/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
