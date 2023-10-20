@@ -1,27 +1,20 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import ProductDetail from "./ProductDetail";
+import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const [card, setCard] = useState({});
   const { id } = useParams();
-  console.log(id);
-  // Fetch the product details when component mounts
+
   useEffect(() => {
-    fetch(`http://localhost:3000/product/${id}`)
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "GET",
+    })
       .then((res) => res.json())
-      .then((data) => setCard(data))
-      .catch((err) => console.error("Error:", err));
+      .then((data) => setCard(data));
   }, [id]);
-  // useEffect(() => {
-  //   fetch(`http://localhost:3000/product/${brandName}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setProducts(data));
-  // }, [brandName]);
-  return (
-    <div>
-      <ProductDetail card={card}></ProductDetail>
-    </div>
-  );
+
+  return <ProductDetail card={card} />;
 };
+
 export default ProductDetails;

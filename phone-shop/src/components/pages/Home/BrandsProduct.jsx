@@ -13,9 +13,15 @@ const BrandsProduct = ({ brandName }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {products.map((product) => (
-        <Brand4Products key={product._id} product={product} />
-      ))}
+      {products.length === 0 ? (
+        <h1 className="text-center font-extrabold text-6xl text-white ">
+          Out of Stock
+        </h1>
+      ) : (
+        products.map((product) => (
+          <Brand4Products key={product._id} product={product} />
+        ))
+      )}
     </div>
   );
 };

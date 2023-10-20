@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 import { Link } from "react-router-dom";
 
 const Brand4Products = ({ product }) => {
-  // console.log(product);
   const { _id, image, name, brandName, price, type, rating } = product;
 
   return (
