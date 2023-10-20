@@ -22,6 +22,7 @@ const Nav = () => {
       <li>
         <NavLink to="/myCart">My Cart</NavLink>
       </li>
+      <li></li>
     </>
   );
 

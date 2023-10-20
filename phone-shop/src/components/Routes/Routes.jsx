@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/signUp/SignUp";
 import PrivateRoute from "../pages/PrivateRoutes/PrivateRoutes";
 import MyCart from "../pages/MyCart/MyCart";
+// import MyCart from "../pages/MyCart/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -53,12 +54,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: (
-          <PrivateRoute>
-            <MyCart></MyCart>
-          </PrivateRoute>
-        ),
+        element: <MyCart></MyCart>,
+        loader: () => fetch("http://localhost:3000/addCart"),
       },
+
       {
         path: "/login",
         element: <Login></Login>,

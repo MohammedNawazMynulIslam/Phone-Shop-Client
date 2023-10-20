@@ -157,7 +157,7 @@ const UpdateProduct = () => {
             </label>
           </div>
         </div>
-        <input type="submit" value="Update" className="btn  mx-auto" />
+        <input type="submit" value="Submit" className="btn  mx-auto" />
       </form>
     </div>
   );
